@@ -1,0 +1,38 @@
+{%extends 'base_user.html'%}
+
+{%block title%}MAKANAN{%endblock%}
+{%block menu%}Menu Makanan{%endblock%}
+{%block content%}
+<div class="page-body">
+    <div class="container-xl">
+        <div class="row row-cards">
+            <div class="col-12">
+                <div class="card">
+                    <div class="table-responsive">
+                        <table class="table table-vcenter table-mobile-md card-table">
+                            <tbody>
+                                {%for row in hasil%}
+                                <tr>
+                                    <td data-label="Name">
+                                        <div class="d-flex py-1 align-items-center" style="margin-left: 20%;">
+                                            <div class="flex-fill">
+                                                <div class="font-weight-medium">{{row.1}}</div>
+                                                <div class="text-muted">{{row.2}}</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td data-label="Title">
+                                        <div style="margin-left: 30%;">Rp{{row.3}}</div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

@@ -1,0 +1,48 @@
+{%extends 'base_kasir.html'%}
+
+{%block title%}Tambah Pembayaran{%endblock%}
+{%block content%}
+<div class="main-container">
+    <div class="xs-pd-20-10 pd-ltr-20">
+        <div class="title pb-20">
+            <h2 class="h3 mb-0">Kantin Amikom</h2>
+        </div>
+        <div class="pd-20 card-box mb-20">
+            <div class="clearfix">
+                <div class="pull-left">
+                    <h4 class="text-blue h4">Tambah Pembayaran</h4>
+                </div>
+            </div>
+            <form action="{{url_for('tambah_payment_baru')}}" method="POST">
+                <div class="form-group row">
+                    <label class="col-sm-12 col-md-2 col-form-label">kasir</label>
+                    <div class="col-sm-12 col-md-10">
+                        <input class="form-control" type="text" name="kasir" class="form-control" placeholder="kasir"
+                            id="kasir">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-12 col-md-2 col-form-label">Date</label>
+                    <div class="col-sm-12 col-md-10">
+                        <input class="form-control date-picker" placeholder="Select Date" type="date" name="hari"
+                            class="form-control" placeholder="hari" id="hari">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-12 col-md-2 col-form-label">income</label>
+                    <div class="col-sm-12 col-md-10">
+                        <input class="form-control" placeholder="income" type="text" name="income" class="form-control"
+                            placeholder="income">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <div class="pull-right">
+                            <button type="submit" class="btn btn-primary pull-right"> Submit </button>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    {%endblock%}
